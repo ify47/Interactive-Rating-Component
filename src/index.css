@@ -1,3 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@layer base {
+  input {
+    @apply hidden;
+  }
+
+  .numberbuttons {
+    @apply inline-flex justify-center items-center bg-[hsl(216deg_17.83%_24.33%)] text-[white] w-[50px] h-[50px] pt-0.5 rounded-[50%] hover:cursor-pointer hover:bg-[hsl(217,12%,63%)];
+  }
+  
+  input[type=radio]:checked + .numberbuttons{
+    @apply cursor-pointer bg-[hsl(25,97%,53%)];
+  }
+
+  button{
+    @apply w-full bg-[hsl(25,97%,53%)] text-[white] text-sm tracking-[1px] mt-[25px] pt-2.5 pb-[7px] px-0 rounded-[20px] hover:cursor-pointer hover:bg-[white] hover:text-[hsl(25,97%,53%)];
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

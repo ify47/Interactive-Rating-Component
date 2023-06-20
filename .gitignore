@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/interactive-rating-component-main
 
 # testing
 /coverage
