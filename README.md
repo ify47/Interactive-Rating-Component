@@ -1,4 +1,4 @@
-# Frontend Mentor - Advice Generator webapp
+# Frontend Mentor - Interactive Rating Component
 
 This project is a solution to the [Interactive Rating Component](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI) from Frontend Mentor. 
 
