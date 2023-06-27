@@ -9,7 +9,6 @@ function App() {
   const getRateValue = (child) => {
     rateValueRef.current = child;
     setClassNameAction(true);
-    console.log("getratevalue mounted");
   };
 
   return (
