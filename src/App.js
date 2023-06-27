@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import RatingPage from "./components/RatingPage";
 import ThankYouPage from "./components/ThankYouPage";
 
 function App() {
-  const [rateValue, SetRateValue] = useState("");
+  const rateValueRef = useRef();
   const [classNameAction, setClassNameAction] = useState(false);
 
-  const getRateValue = (childName) => {
-    SetRateValue(childName);
+  const getRateValue = (child) => {
+    rateValueRef.current = child;
     setClassNameAction(true);
+    console.log("getratevalue mounted");
   };
 
   return (
@@ -18,7 +19,10 @@ function App() {
       items-center min-h-screen"
     >
       <RatingPage rateNumber={getRateValue} classAction={classNameAction} />
-      <ThankYouPage rateNumber={rateValue} classAction={classNameAction} />
+      <ThankYouPage
+        rateNumber={rateValueRef.current}
+        classAction={classNameAction}
+      />
     </main>
   );
 }
