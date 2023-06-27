@@ -9,7 +9,7 @@ const RatingPage = ({ rateNumber, classAction }) => {
   };
 
   const handleSubmit = () => {
-    inputs > 0 && rateNumber(inputs);
+    rateNumber(inputs);
   };
 
   return (
@@ -82,7 +82,9 @@ const RatingPage = ({ rateNumber, classAction }) => {
           5
         </label>
       </div>
-      <button onClick={handleSubmit}>SUBMIT</button>
+      <button disabled={!inputs} onClick={handleSubmit}>
+        SUBMIT
+      </button>
     </section>
   );
 };
