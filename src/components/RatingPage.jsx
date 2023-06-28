@@ -18,7 +18,7 @@ const RatingPage = ({ rateNumber, classAction }) => {
     <section
       className={`bg-[linear-gradient(hsl(213,19%,18%),hsl(216deg_14.91%_11.79%))] w-[min(100%_-_33px,400px)] p-[30px] rounded-[25px] ${
         classAction ? "hidden" : ""
-      }`} //checking the boolean value provided from props if its true and adds hidden class from tailwind, if it's not leave it empty
+      }`} //adds the hidden class conditionally
     >
       <img
         className="bg-[hsl(216deg_17.83%_24.33%)] w-10 p-2.5 rounded-[50%]"
@@ -33,17 +33,17 @@ const RatingPage = ({ rateNumber, classAction }) => {
         appreciated to help us improve our offering!
       </p>
       <div className="flex justify-between mt-5">
-        {rates.map((rates) => (
-          <div key={rates}>
+        {rates.map((rate) => (
+          <div key={rate}>
             <input
               type="radio"
               name="number"
-              id={rates}
-              value={rates}
+              id={rate}
+              value={rate}
               onChange={handleChange}
             />
-            <label className="numberbuttons" htmlFor={rates}>
-              {rates}
+            <label className="numberbuttons" htmlFor={rate}>
+              {rate}
             </label>
           </div>
         ))}
