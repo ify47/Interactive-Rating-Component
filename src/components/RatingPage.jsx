@@ -34,7 +34,7 @@ const RatingPage = ({ rateNumber, classAction }) => {
       </p>
       <div className="flex justify-between mt-5">
         {rates.map((rate) => (
-          <div key={rate}>
+          <React.Fragment key={rate}>
             <input
               type="radio"
               name="number"
@@ -45,7 +45,7 @@ const RatingPage = ({ rateNumber, classAction }) => {
             <label className="numberbuttons" htmlFor={rate}>
               {rate}
             </label>
-          </div>
+          </React.Fragment>
         ))}
       </div>
       <button className="uppercase" disabled={!inputs} onClick={handleSubmit}>
